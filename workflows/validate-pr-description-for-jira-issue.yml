@@ -1,0 +1,26 @@
+name: Validate PR Description for Jira Issue
+
+on:
+  pull_request:
+    types: [opened, reopened, edited]
+    branches:
+      - main
+      - rel-*
+
+jobs:
+  validate-pr-description:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check PR description for Jira issue
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const prDescription = context.payload.pull_request.body || '';
+          const lines = prDescription.split('\n').map(line => line.trim());
+          const jiraRegex = /^Jira Issue:\s*([A-Z]+-\d+)(,\s*[A-Z]+-\d+)*$/;
+          const noneRegex = /^Jira Issue:\s*None$/i;
+          const found = lines.some(line => jiraRegex.test(line) || noneRegex.test(line));
+          if (!found) {
+            throw new Error('The pull request description must contain a line following the format: "Jira Issue: PROJECT-123, PROJECT-456" or "Jira Issue: None".');
+          }
