@@ -1,6 +1,6 @@
 # SGF Platform
 
-[Example: Clone Market Delivery Project](CloneMarketDeliveryProject.mp4)
+![Example: Clone Market Delivery Project](CloneMarketDeliveryProject.mp4)
 
 
 
