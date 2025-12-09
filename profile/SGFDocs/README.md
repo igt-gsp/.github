@@ -52,6 +52,52 @@ The SGF Development Process is based on the Git feature branch workflow.  Please
 
 [***<ins>Git feature branch workflow</ins>***](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
 
+The following is a breakdown of the general steps to be used for the SGF Development Process.
+
+- **Sync Market Delivery Project -** bring you local market delivery project (i.e. proj-vlt-aglc) up to date with the Github repo via git clone command (no local repo exists) or git pull command (updating an existing repo).
+- **Create Feature Branches -** Create feature branches for the super module and for all submodules that will be modified as part of the feature development task.
+- **Development Work -** At this point all the development tasks are performed to complete the implementation and unit testing of the feature development task.
+- **Pull Request Process for Modified Submodules -** Go through the Github pull request process for each modified submodule such that all changes are reviewed. 
+
+The followings sections provide more detail for each of the above steps.  
+
+NOTES:  
+- In the following sections, an example of above the SGF Development Process for a feature called “sync-aglc-with-latest-perforce-changes” will be shown.
+- All git related functions are referenced in the following pages are demonstrated using the Git Extension UI tool.
+
+## Sync Market Delivery Project  
+
+### Clone Market Delivery Project  
+If you don’t have an existing local repo for the Market Delivery Project to be worked on, you will need to clone the repository from Github.  
+
+**Example:**
+
+The following video is an example of cloning a proj-vlt-aglc market delivery project Github repo to a local repo. 
+
+https://github.com/user-attachments/assets/7a1a999a-e7bc-4991-8e95-00848876f9a1
+
+Cloning a repository containing submodules in Git Extensions will only clone the contents of the super module, it will not clone the submodules.  To clone submodules in Git Extensions, right click on the super module and select “Update”.
+
+<img width="650" height="568" alt="GitExtensionsCloneSubmodules" src="https://github.com/user-attachments/assets/344175d5-2796-411d-a06c-d9a3ba5c7faa" />
+
+### Pull/Update Existing Local Repository  
+If you have an existing local repository that you would like to perform your feature work on, use the following steps to make sure this existing local repo is completely up to date with the remote repository.
+
+The best way to bring the local repo up to date is to do the following.
+
+- Switch the proj super module to the default branch (main or rel- branch).
+- For each submodule:  
+	- Switch to the default branch (main or rel- branch).
+	- Check if there are any lingering modified files in your working directory.  These files should either be stashed or reset as you want to be starting with no changes in your working directory.
+	- Do a pull command.
+
+**Example:**
+
+The following video shows the process of bring an existing local repo up to date and ready for the start of development on a new feature.  Please note that due to attachment file size limitations in Confluence the video ends after updating the Platform submodule, the full process would include all the submodules.
+
+https://github.com/user-attachments/assets/79070bec-8306-4bdc-a2f9-a92bfd7592ff
+
+
 ## Build and Run Market Delivery Project
 
 **Prerequisites:**
@@ -100,13 +146,13 @@ The following are the most commonly used features.
 
 CloneMarketDeliveryProject.mp4:  
 
-https://github.com/user-attachments/assets/7a1a999a-e7bc-4991-8e95-00848876f9a1
+
 
 GitExtensionsCloneSubmodules.png:
 <img width="650" height="568" alt="GitExtensionsCloneSubmodules" src="https://github.com/user-attachments/assets/344175d5-2796-411d-a06c-d9a3ba5c7faa" />
 
 PullExistingLocalRepository.mp4:
-https://github.com/user-attachments/assets/79070bec-8306-4bdc-a2f9-a92bfd7592ff
+
 
 CreateFeatureBranches.mp4:
 https://github.com/user-attachments/assets/d382f2e2-6d52-4679-8939-ba503f16ef4f
