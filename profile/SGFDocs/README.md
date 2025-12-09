@@ -70,11 +70,26 @@ NOTE: You can continue on and perform the ‘Setup Test Games’ step while this
 - From within the VLT_Mainline.sln, right click on the Platform->SGF->GOOFExecutiveControl project and select “Set as Startup Project”.
 - You can now run/debug (Debug->Start Debugging) the solution.
 
-<details>
+## Virtual VLT Testing Tool
+The Virtual VLT tool allows the user to simulate things like adding money, opening/closing doors, tech/audit key access, .... The Virtual VLT tool (VirtualVLT.exe) can be found at the following location.
+
+**Installation:**  
+If the VirtualVLT has not previously been installed, extract the <proj repo dir>\Platform\SGF\Tools\VirtualVLT\VirtualVLT.7z zip file to a global location outside the <proj repo dir>.  This tool basically never changes and therefore can be used going forward for an SGF Platform you run.
+
+**Initial Setup:**  
+When you first run the VirtualVLT tool, it will be defaulted to connecting to the Core/Platform running on your local machine (i.e. 127.0.0.1). If this is the way you are using it, then there is no need to make any changes to the "IP addresses of remote target" or "IP addresses of this computer". However, if you are trying to connect to a Core/Platform running on a different computer, you must set the "IP addresses of remote target" or "IP addresses of this computer" values appropriately and press the "Set End Point" buttons.
+
+**Features:**  
+The following are the most commonly used features.
+- Money Deposit - simulating the deposit of money to the VLT.
+- Door Control - Opening and Closing of doors.
+- Key Control - Audit and Tech key control for access to the backoffice.
+
+<!--<details>
 <summary><strong>Windows Build and Run </strong></summary>
 
 
-</details>
+</details>-->
 
 
 
