@@ -46,31 +46,37 @@ proj-vlt-xyz/             # Market Delivery Project Repo for VLT product and XYZ
 │   ├── ...               # Submodule reference to other Microcontroller Repos (optional depending on market)
 ```
 
-# Build and Run Market Delivery Project
+
+# SGF Development Process
+The SGF Development Process is based on the Git feature branch workflow.  Please read the information at the following link to have a good foundation for the details to follow.
+
+[***<ins>Git feature branch workflow</ins>***](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+
+## Build and Run Market Delivery Project
 
 **Prerequisites:**
 - If you haven’t already done so, install cmake by running the cmake install msi file located in the <proj repo dir>\Platform\ThirdParty\Archives\Installed directory.
 - The Market Delivery Project to be built (example: proj-vlt-alc) has been cloned. Be sure to clone recursively to ensure all submodules are cloned.
 
-## Windows Build and Run
+### Windows Build and Run
 
-### Creating and Building Visual Studio Solution
+#### Creating and Building Visual Studio Solution
 - Run <proj repo dir>\Platform\ThirdParty\install.bat install ThirdParty libraries.
 - Run <proj repo dir>\CIBuildScripts\run_cmake.bat to create the Visual Studio solution.
 - Upon the successful completion of the run_cmake.bat script, open the ‘VLT_Mainline.sln’ located in the build directory (example: CIBuildScripts\build_vs2022_x64) and perform a Debug build of the solution.  
 NOTE: You can continue on and perform the ‘Setup Test Games’ step while this solution is building.
 
 
-### Setup Test Games
+#### Setup Test Games
 - Clone the igt-gsp/testgames-sgf Github repository.
 - Create a System environment variable named CONTENT_PROJECT_ROOT and set its value to the full path to the ‘Content' directory located at the root of the testgames-sgf repo directory (example: E:\Github\testgames-sgf\Content).
 
-### Run the SGF Platform
+#### Run the SGF Platform
 - Because the CONTENT_PROJECT_ROOT environment variable was added after we opened VLT_Mainline.sln, the VLT_Mainline.sln must be closed and re-opened to pickup this new environment variable.
 - From within the VLT_Mainline.sln, right click on the Platform->SGF->GOOFExecutiveControl project and select “Set as Startup Project”.
 - You can now run/debug (Debug->Start Debugging) the solution.
 
-## Virtual VLT Testing Tool
+### Virtual VLT Testing Tool
 The Virtual VLT tool allows the user to simulate things like adding money, opening/closing doors, tech/audit key access, .... The Virtual VLT tool (VirtualVLT.exe) can be found at the following location.
 
 **Installation:**  
@@ -92,7 +98,8 @@ The following are the most commonly used features.
 <summary><strong>Windows Build and Run </strong></summary>
 </details>-->
 
-CloneMarketDeliveryProject.mp4:
+CloneMarketDeliveryProject.mp4:  
+
 https://github.com/user-attachments/assets/7a1a999a-e7bc-4991-8e95-00848876f9a1
 
 GitExtensionsCloneSubmodules.png:
