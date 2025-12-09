@@ -81,9 +81,12 @@ When you first run the VirtualVLT tool, it will be defaulted to connecting to th
 
 **Features:**  
 The following are the most commonly used features.
-- Money Deposit - simulating the deposit of money to the VLT.
-- Door Control - Opening and Closing of doors.
-- Key Control - Audit and Tech key control for access to the backoffice.
+1. Money Deposit - simulating the deposit of money to the VLT.
+2. Door Control - Opening and Closing of doors.
+3. Key Control - Audit and Tech key control for access to the backoffice.
+
+<img width="662" height="691" alt="image" src="https://github.com/user-attachments/assets/2ec3e3f2-ba3c-4b5c-b67e-1c286d145263" />
+
 
 <!--<details>
 <summary><strong>Windows Build and Run </strong></summary>
