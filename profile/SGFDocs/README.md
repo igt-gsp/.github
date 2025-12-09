@@ -90,9 +90,34 @@ The following are the most commonly used features.
 
 <!--<details>
 <summary><strong>Windows Build and Run </strong></summary>
-
-
 </details>-->
+
+CloneMarketDeliveryProject.mp4:
+https://github.com/user-attachments/assets/7a1a999a-e7bc-4991-8e95-00848876f9a1
+
+GitExtensionsCloneSubmodules.png:
+<img width="650" height="568" alt="GitExtensionsCloneSubmodules" src="https://github.com/user-attachments/assets/344175d5-2796-411d-a06c-d9a3ba5c7faa" />
+
+PullExistingLocalRepository.mp4:
+https://github.com/user-attachments/assets/79070bec-8306-4bdc-a2f9-a92bfd7592ff
+
+CreateFeatureBranches.mp4:
+https://github.com/user-attachments/assets/d382f2e2-6d52-4679-8939-ba503f16ef4f
+
+CodeModifications.mp4:
+https://github.com/user-attachments/assets/7148f894-506f-42c7-937a-5fc8e2ad6ae6
+
+CommitAndPushSubmoduleChanges.mp4:
+https://github.com/user-attachments/assets/d67099fc-f2d2-46fd-9037-62a0c858f84a
+
+CommitAndPushSupermoduleChanges.mp4:
+https://github.com/user-attachments/assets/6d46209b-1153-4bf7-85c9-fce634619ddd
+
+RunGithubActionsFBWBuild.mp4:
+https://github.com/user-attachments/assets/80ebeb2f-ff22-455b-9584-7947e42605c1
+
+
+
 
 
 
