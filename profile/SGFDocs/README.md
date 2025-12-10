@@ -98,6 +98,28 @@ The following video shows the process of bring an existing local repo up to date
 https://github.com/user-attachments/assets/79070bec-8306-4bdc-a2f9-a92bfd7592ff
 
 
+## Create Feature Branches  
+The next step after syncing your local market delivery project is to create a feature branch for the super module and any submodules that will be modified during the feature development task.  The following are the steps to create and push/publish the new feature branches.  
+
+- Create feature branch for the super module.
+- Push/publish the newly created branch for the super module.
+- For each submodule to be modified:
+	- Open the submodule repo.
+	- Switch to the default branch (main or rel- branch).
+	- Create the feature branch for the submodule
+	- Push/publish the newly created feature branch.
+- For each submodule that will NOT be modified:
+	- Open the submodule repo.
+	- Switch to the default branch (main or rel- branch).
+
+**Example:**
+
+The “sync-aglc-with-latest-perforce-changes” feature will require modifications to the Market and G2S submodules.  The following video shows the process for creating feature branches for the super module, the Market submodule, and the G2S submodule.
+
+NOTE: The below video does not show switching to the default branch for the submodules that won’t be modified.
+
+https://github.com/user-attachments/assets/d382f2e2-6d52-4679-8939-ba503f16ef4f
+
 ## Build and Run Market Delivery Project
 
 **Prerequisites:**
@@ -155,7 +177,7 @@ PullExistingLocalRepository.mp4:
 
 
 CreateFeatureBranches.mp4:
-https://github.com/user-attachments/assets/d382f2e2-6d52-4679-8939-ba503f16ef4f
+
 
 CodeModifications.mp4:
 https://github.com/user-attachments/assets/7148f894-506f-42c7-937a-5fc8e2ad6ae6
