@@ -220,38 +220,99 @@ The following video shows the Github Actions Feature Branch Workflow being run o
 https://github.com/user-attachments/assets/80ebeb2f-ff22-455b-9584-7947e42605c1
 
 
-Pull Request Process Assets:
+## Pull Request Process  
+After the Develop Work for the feature has been completed, the next step is to go through the pull request process to ensure your changes are ready to be merge back to the main branch.  The following diagram provides an overview of the pull request process.
 
-PullRequestProcessOverview:  
 <img width="943" height="446" alt="image" src="https://github.com/user-attachments/assets/3f978fa2-65d7-47d5-8ccd-93021f9a2a1d" />
 
-OpenPullRequest.mp4:  
+### Pull Request Mod
+After feature or bug fix implementation is complete, the first step initiate the start of the pull request process is to open (or update an existing) a pull request.  The following steps detail how to create/open a pull request.
+
+The following are the steps to open a pull request in Github.
+- Create Jira issue for the feature developed.
+- Go to the repository where the pull request is to be opened.
+- Select the branch the pull request is to be created against.
+- Press the “Contribute” dropdown and then press the “Open pull request” button.
+- Add an appropriate title for the pull request.
+- Specify the Jira issue in the description->Jira Issue field.
+- Press the “Create pull request” button.
+- Add appropriate reviewers for the feature developed.
+
+**Example:**
+
+The following example video shows the opening of a pull request in the protocol-g2s Github repository which is the repository associated with the G2S submodule.  For the “sync-aglc-with-latest-perforce-changes” feature, this same process would need to be repeated for the market-vlt-aglc Github repository.
+
 https://github.com/user-attachments/assets/56686eae-64e1-4dbb-890a-0a46f6b69616
 
-Component Build Error:
+### Continuous Integration  
+Upon modification to the pull request, a continuous integration pipeline will be triggered that validates the pull requests changes by performing the following checks.
+
+- Component Build
+- Unit Testing
+- Static Code Analysis
+
+#### Component Build  
+This check validates that the code modifications associated with the pull request did not introduce any build issues.  A failed pull request ‘Build’ check will look like the following.
+
 <img width="678" height="555" alt="image" src="https://github.com/user-attachments/assets/a6127582-fbc5-4203-9930-5c6aef4ccabe" />
 
-Unit Test Error:
+All failed pull request ‘Build’ checks must be fixed before continuing.
+
+#### Unit Testing  
+A series of unit tests are run to validate the runtime functionality of the component.  A failed pull request ‘Automated-Tests’ check will look like the following.
+
 <img width="682" height="586" alt="image" src="https://github.com/user-attachments/assets/526392da-493b-457b-a33a-1d0823c146b9" />
 
-GOOF crash suspected Image (TBD):
 
-SonarQube failure image (TBD):
+All failed pull request ‘Automated-Tests’ checks must be fixed before continuing.
 
-Job Summary Info SonarQube Link Image:
+Known Issues:  
+- There is an occasional platform crash that occurs, this is indicated by a “GOOF crash suspected” message in the CI pipeline Job Summary Info (see below image).  The developer should retrigger the pull request CI pipeline (close and then reopen the pull request) to ensure this is the known platform crash.  This crash occurs very rarely, therefore multiple platform crashes in a row is an indication that the pull request changes may have introduced a platform crash and therefore should be investigated.
+
+[asset missing]
+
+- The 'Automated-Tests' will occasionally hang in the GOOFUtilitiesTest. A retrigger the pull request CI pipeline (close and then reopen the pull request) will be required.
+
+#### Static Code Analysis
+SonarQube static code analysis scan is performed to validate that no unwanted code quality issues have been introduced.  A failed pull request ‘SonarQube’ check will look like the following.
+
+[asset missing]
+
+A link to the SonarQube scan results can be found in the 'Job Summary Info” output of the CI pipeline.
+
 <img width="717" height="246" alt="image" src="https://github.com/user-attachments/assets/2247a993-9782-4ce1-beda-91d509cc8cbb" />
 
-SonarQube Output Image:
+Following this link will bring you to a page that looks like the following.
+
 <img width="1081" height="496" alt="image" src="https://github.com/user-attachments/assets/7566a0fe-bfa8-4507-8030-12e6cd494211" />
 
-Merging blocked before code review:
+The developer is responsible for making sure that any new issues (other then Code Smells, see note below) are resolved with one of the following statuses.
+
+- Resolve as fixed
+- Resolve as false positive
+- Resolve as won’t fix
+
+NOTE: Code Smells can be ignored.
+
+### Code Review  
+The developer is expected to work with the reviewer(s) to resolve any issues/concerns the reviewer(s) may highlight.  Any code changes that come out of this review process are expected to go through the Development Work steps.  
+
+When the pull request is approved by at least one reviewer, the pull request status will change from something that looks like the following.
+
 <img width="860" height="267" alt="image" src="https://github.com/user-attachments/assets/a22e6e37-2042-403b-85f5-edbb8e651390" />
 
-Merging allowed after code review:
+To something that looks like the following:
+
 <img width="928" height="297" alt="image" src="https://github.com/user-attachments/assets/8f45ea91-b8f9-4e64-8240-885202432c97" />
 
 
-Merge pull request:
+### Merge Pull Request
+After the pull request reviews are approved, the next and final step is to merge the pull request changes back into the main branch.  The “Squash and merge“ pull request merge type is the recommended option to be used.
+
+**Example:**
+
+The following video shows the merging of the market-vlt-aglc pull request and the protocol-g2s pull request associated with the “sync-aglc-with-latest-perforce-changes“ feature.
+
 https://github.com/user-attachments/assets/631099ea-abfe-4d71-8116-4f8f151a0916
 
 
