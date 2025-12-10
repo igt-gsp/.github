@@ -269,14 +269,14 @@ All failed pull request ‘Automated-Tests’ checks must be fixed before contin
 Known Issues:  
 - There is an occasional platform crash that occurs, this is indicated by a “GOOF crash suspected” message in the CI pipeline Job Summary Info (see below image).  The developer should retrigger the pull request CI pipeline (close and then reopen the pull request) to ensure this is the known platform crash.  This crash occurs very rarely, therefore multiple platform crashes in a row is an indication that the pull request changes may have introduced a platform crash and therefore should be investigated.
 
-[asset missing]
+<img width="795" height="390" alt="image" src="https://github.com/user-attachments/assets/d4ceff04-85f6-44cc-83be-b8d0d8075fef" />
 
 - The 'Automated-Tests' will occasionally hang in the GOOFUtilitiesTest. A retrigger the pull request CI pipeline (close and then reopen the pull request) will be required.
 
 #### Static Code Analysis
 SonarQube static code analysis scan is performed to validate that no unwanted code quality issues have been introduced.  A failed pull request ‘SonarQube’ check will look like the following.
 
-[asset missing]
+<img width="653" height="580" alt="image" src="https://github.com/user-attachments/assets/a443a502-3cac-45fa-a59c-f8c6a612c52d" />
 
 A link to the SonarQube scan results can be found in the 'Job Summary Info” output of the CI pipeline.
 
