@@ -120,6 +120,29 @@ NOTE: The below video does not show switching to the default branch for the subm
 
 https://github.com/user-attachments/assets/d382f2e2-6d52-4679-8939-ba503f16ef4f
 
+## Development Work
+
+This step consists of the following tasks.
+
+- Code Modifications
+- Build and Run Market Delivery Project
+- Commit and Push Submodule Changes
+- Commit and Push Super Module Changes
+- Run Github Actions Feature Branch Workflow Build
+
+Please note the intent should be to perform these above tasks many times throughout the Development Work step building up the feature interatively.
+
+The following sections provide more detail for each of these tasks.
+
+### Code Modifications  
+This task just requires the developer to makes the required code modifications for the feature being developed.  Unlike Perforce, Git does not require any checkouts for files to be modified, the developer just needs to make the required modifications in workspace associated with the super modules local repo (in our example, this would be E:\Github2\proj-vlt-aglc).
+
+**Example:**
+
+For the “sync-aglc-with-latest-perforce-changes” feature, the files modified since the last sync from Perforce for AGLC are copied to the local proj-vlt-aglc.  The following video shows how you can view the workspace modified Market and G2S submodule files.
+
+https://github.com/user-attachments/assets/7148f894-506f-42c7-937a-5fc8e2ad6ae6
+
 ## Build and Run Market Delivery Project
 
 **Prerequisites:**
@@ -143,6 +166,8 @@ NOTE: You can continue on and perform the ‘Setup Test Games’ step while this
 - Because the CONTENT_PROJECT_ROOT environment variable was added after we opened VLT_Mainline.sln, the VLT_Mainline.sln must be closed and re-opened to pickup this new environment variable.
 - From within the VLT_Mainline.sln, right click on the Platform->SGF->GOOFExecutiveControl project and select “Set as Startup Project”.
 - You can now run/debug (Debug->Start Debugging) the solution.
+
+### Linux Build and Run
 
 ### Virtual VLT Testing Tool
 The Virtual VLT tool allows the user to simulate things like adding money, opening/closing doors, tech/audit key access, .... The Virtual VLT tool (VirtualVLT.exe) can be found at the following location.
@@ -180,7 +205,7 @@ CreateFeatureBranches.mp4:
 
 
 CodeModifications.mp4:
-https://github.com/user-attachments/assets/7148f894-506f-42c7-937a-5fc8e2ad6ae6
+
 
 CommitAndPushSubmoduleChanges.mp4:
 https://github.com/user-attachments/assets/d67099fc-f2d2-46fd-9037-62a0c858f84a
