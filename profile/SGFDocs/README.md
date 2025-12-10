@@ -219,3 +219,41 @@ The following video shows the Github Actions Feature Branch Workflow being run o
 
 https://github.com/user-attachments/assets/80ebeb2f-ff22-455b-9584-7947e42605c1
 
+
+Pull Request Process Assets:
+
+PullRequestProcessOverview:  
+<img width="943" height="446" alt="image" src="https://github.com/user-attachments/assets/3f978fa2-65d7-47d5-8ccd-93021f9a2a1d" />
+
+OpenPullRequest.mp4:  
+https://github.com/user-attachments/assets/56686eae-64e1-4dbb-890a-0a46f6b69616
+
+Component Build Error:
+<img width="678" height="555" alt="image" src="https://github.com/user-attachments/assets/a6127582-fbc5-4203-9930-5c6aef4ccabe" />
+
+Unit Test Error:
+<img width="682" height="586" alt="image" src="https://github.com/user-attachments/assets/526392da-493b-457b-a33a-1d0823c146b9" />
+
+GOOF crash suspected Image (TBD):
+
+SonarQube failure image (TBD):
+
+Job Summary Info SonarQube Link Image:
+<img width="717" height="246" alt="image" src="https://github.com/user-attachments/assets/2247a993-9782-4ce1-beda-91d509cc8cbb" />
+
+SonarQube Output Image:
+<img width="1081" height="496" alt="image" src="https://github.com/user-attachments/assets/7566a0fe-bfa8-4507-8030-12e6cd494211" />
+
+Merging blocked before code review:
+<img width="860" height="267" alt="image" src="https://github.com/user-attachments/assets/a22e6e37-2042-403b-85f5-edbb8e651390" />
+
+Merging allowed after code review:
+<img width="928" height="297" alt="image" src="https://github.com/user-attachments/assets/8f45ea91-b8f9-4e64-8240-885202432c97" />
+
+
+Merge pull request:
+https://github.com/user-attachments/assets/631099ea-abfe-4d71-8116-4f8f151a0916
+
+
+
+
