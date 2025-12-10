@@ -143,33 +143,33 @@ For the “sync-aglc-with-latest-perforce-changes” feature, the files modified
 
 https://github.com/user-attachments/assets/7148f894-506f-42c7-937a-5fc8e2ad6ae6
 
-## Build and Run Market Delivery Project
+### Build and Run Market Delivery Project
 
 **Prerequisites:**
 - If you haven’t already done so, install cmake by running the cmake install msi file located in the <proj repo dir>\Platform\ThirdParty\Archives\Installed directory.
 - The Market Delivery Project to be built (example: proj-vlt-alc) has been cloned. Be sure to clone recursively to ensure all submodules are cloned.
 
-### Windows Build and Run
+#### Windows Build and Run
 
-#### Creating and Building Visual Studio Solution
+##### Creating and Building Visual Studio Solution
 - Run <proj repo dir>\Platform\ThirdParty\install.bat install ThirdParty libraries.
 - Run <proj repo dir>\CIBuildScripts\run_cmake.bat to create the Visual Studio solution.
 - Upon the successful completion of the run_cmake.bat script, open the ‘VLT_Mainline.sln’ located in the build directory (example: CIBuildScripts\build_vs2022_x64) and perform a Debug build of the solution.  
 NOTE: You can continue on and perform the ‘Setup Test Games’ step while this solution is building.
 
 
-#### Setup Test Games
+##### Setup Test Games
 - Clone the igt-gsp/testgames-sgf Github repository.
 - Create a System environment variable named CONTENT_PROJECT_ROOT and set its value to the full path to the ‘Content' directory located at the root of the testgames-sgf repo directory (example: E:\Github\testgames-sgf\Content).
 
-#### Run the SGF Platform
+##### Run the SGF Platform
 - Because the CONTENT_PROJECT_ROOT environment variable was added after we opened VLT_Mainline.sln, the VLT_Mainline.sln must be closed and re-opened to pickup this new environment variable.
 - From within the VLT_Mainline.sln, right click on the Platform->SGF->GOOFExecutiveControl project and select “Set as Startup Project”.
 - You can now run/debug (Debug->Start Debugging) the solution.
 
-### Linux Build and Run
+#### Linux Build and Run
 
-### Virtual VLT Testing Tool
+#### Virtual VLT Testing Tool
 The Virtual VLT tool allows the user to simulate things like adding money, opening/closing doors, tech/audit key access, .... The Virtual VLT tool (VirtualVLT.exe) can be found at the following location.
 
 **Installation:**  
@@ -186,40 +186,36 @@ The following are the most commonly used features.
 
 <img width="662" height="691" alt="image" src="https://github.com/user-attachments/assets/2ec3e3f2-ba3c-4b5c-b67e-1c286d145263" />
 
+### Commit and Push Submodule Changes
+Now that some code changes have been implemented and unit tested, you can now push the submodule changes to Github.  Please note that since you are working on a feature branch there should be no concern about “breaking the build” for others and therefore committing and pushing to Github should be done often.
 
-<!--<details>
-<summary><strong>Windows Build and Run </strong></summary>
-</details>-->
+**Example:**
 
-CloneMarketDeliveryProject.mp4:  
+The following video shows the committing and pushing to Github of the Market and G2S submodule modifications for the  “sync-aglc-with-latest-perforce-changes” feature.
 
-
-
-GitExtensionsCloneSubmodules.png:
-<img width="650" height="568" alt="GitExtensionsCloneSubmodules" src="https://github.com/user-attachments/assets/344175d5-2796-411d-a06c-d9a3ba5c7faa" />
-
-PullExistingLocalRepository.mp4:
-
-
-CreateFeatureBranches.mp4:
-
-
-CodeModifications.mp4:
-
-
-CommitAndPushSubmoduleChanges.mp4:
 https://github.com/user-attachments/assets/d67099fc-f2d2-46fd-9037-62a0c858f84a
 
-CommitAndPushSupermoduleChanges.mp4:
+### Commit and Push Super Module Changes  
+At this point you may be wondering why there are any super module changes to be committed/pushed since we haven’t explicitly made an super module changes.  The way that git submodules work is that the repository that contains one or more submodules (what we have been calling the super module) keeps a commit reference for each of its submodules.  In other words, the super module is always referencing a specific snapshot in time (a specific commit) for each of its submodules.  Therefore, the only way for the super module to have knowledge of the changes we have made to the submodules is to commit and push that latest submodule commit referencing to the super module repository.
+
+**Example:**
+
+The following video shows the commit and push of the super module changes.
+
 https://github.com/user-attachments/assets/6d46209b-1153-4bf7-85c9-fce634619ddd
 
-RunGithubActionsFBWBuild.mp4:
+
+### Run Github Actions Feature Branch Workflow Build
+The running of the Feature Branch Workflow in Github Actions essentially allows the developer to build and package the current state of the feature branch.  This can be thought of as something equivalent to CI builds in Jenkins.  The following are the steps to run the feature branch workflow 
+
+- Go to the super module repository in Github
+- Select the “Actions” tab
+- Find and select the Actions Workflow that is named FeatureBranchWorkflow or the workflow that ends with “_fbw” (feature branch workflow).
+- Press the “Run workflow” dropdown menu and choose the branch you want the workflow run on and then press the “Run workflow“ button.
+
+**Example:**
+
+The following video shows the Github Actions Feature Branch Workflow being run on the “sync-aglc-with-latest-perforce-changes” branch of the proj-vlt-aglc repository.
+
 https://github.com/user-attachments/assets/80ebeb2f-ff22-455b-9584-7947e42605c1
 
-
-
-
-
-
-		
-		
